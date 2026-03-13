@@ -35,12 +35,6 @@ function addEmployee(){
 function displayEmployees(){
 
     let output = document.getElementById("output");
-
-    if(employees.length === 0){
-        output.innerHTML = "No employees added yet.";
-        return;
-    }
-
     let text = "";
 
     employees.forEach(emp => {
@@ -59,13 +53,7 @@ function displayEmployees(){
 function filterSalary(){
 
     let output = document.getElementById("output");
-
     let filtered = employees.filter(emp => emp.salary > 50000);
-
-    if(filtered.length === 0){
-        output.innerHTML = "No employees with salary greater than 50000.";
-        return;
-    }
 
     let text = "";
 
@@ -108,28 +96,16 @@ function averageSalary(){
     let avg = total / employees.length;
 
     document.getElementById("output").innerHTML =
-    "Average Salary: " + avg.toFixed(2);
+    "<h3>Average Salary: " + avg.toFixed(2); "</h3>"
 }
 
 
 
 function countDepartment(){
 
-    let deptCount = {};
+    let deptName = prompt("Enter Department Name: ")
+    let count = employees.filter(emp => emp.department === deptName).length;
+        document.getElementById("output").innerHTML =
+        "<h3>Employees in " + deptName + ": " + count + "</h3>"
 
-    employees.forEach(emp => {
-        if(deptCount[emp.department]){
-            deptCount[emp.department]++;
-        } else{
-            deptCount[emp.department] = 1;
-        }
-    });
-
-    let text = "";
-
-    for(let dept in deptCount){
-        text += dept + ": " + deptCount[dept] + "<br>";
-    }
-
-    document.getElementById("output").innerHTML = text;
 }

@@ -16,7 +16,7 @@ body{
 }
 
 h2{
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 
@@ -31,7 +31,7 @@ input{
 
 
 button{
-    background-color: #007BFF;
+    background-color: green;
     color: white;
     border: none;
     padding: 10px 15px;
@@ -43,8 +43,7 @@ button{
 }
 
 button:hover{
-    background-color: #0056b3;
-    transform: scale(1.05);
+    background-color:darkgreen;
 }
 
 
