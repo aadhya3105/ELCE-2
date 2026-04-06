@@ -80,6 +80,7 @@ function totalSalary(){
 
 
 
+
 function averageSalary(){
 
     if(employees.length === 0){
@@ -109,3 +110,7 @@ function countDepartment(){
         "<h3>Employees in " + deptName + ": " + count + "</h3>"
 
 }
+
+
+
+
