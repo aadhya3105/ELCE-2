@@ -1,0 +1,53 @@
+/* The Main Background */
+body {
+  background-color: #041e42; /* Deep Dark Blue */
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertical Center */
+  align-items: center;     /* Horizontal Center */
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Container for the cards */
+div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* Main Heading */
+h1 {
+  color: white;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* The White Cards */
+.student-card {
+  background: white;
+  padding: 25px;
+  margin: 10px 0;
+  width: 320px;
+  border-radius: 12px;
+  text-align: center; /* Center aligns all text inside the card */
+  
+  /* Reactive properties */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+
+.student-card h2 {
+  margin: 0 0 10px 0;
+  color: #333;
+}
+
+.student-card p {
+  margin: 5px 0;
+  color: #666;
+  font-weight: 500;
+}
